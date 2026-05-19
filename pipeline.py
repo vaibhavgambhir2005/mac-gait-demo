@@ -1,13 +1,13 @@
-"""End-to-end session processing."""
+"""End-to-end session processing (flat layout for GitHub / Streamlit Cloud)."""
 
 from pathlib import Path
 
 import pandas as pd
 
-from src.io import load_session, load_trial
-from src.kinematics import load_normative, process_trials
-from src.qc import run_qc
-from src.report import generate_clinical_summary, plot_knee_flexion
+from gait_io import load_session, load_trial
+from kinematics import load_normative, process_trials
+from qc import run_qc
+from report import generate_clinical_summary, plot_knee_flexion
 
 
 def run_session(data_dir: str | Path, included_trial_ids: list[str] | None = None) -> dict:
