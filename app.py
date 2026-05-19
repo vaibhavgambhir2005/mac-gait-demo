@@ -88,7 +88,7 @@ with tab_qc:
                 "Status": "PASS" if q.passed else "FAIL",
                 "In report": "Yes" if q.trial_id in results["included_trials"] else "No",
                 "Flags": "; ".join(q.flags) if q.flags else "—",
-                "Marker mean": q.metrics.get("marker_mean"),
+                "Missing frames": q.metrics.get("marker_max_gap_frames"),
                 "Force SNR": q.metrics.get("force_snr"),
                 "EMG baseline σ": q.metrics.get("emg_baseline_std_uV"),
                 "GRF peaks": q.metrics.get("grf_peaks"),
