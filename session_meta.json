@@ -1,0 +1,12 @@
+{
+  "patient_id": "DEMO-001",
+  "age_years": 10,
+  "sex": "F",
+  "condition": "cerebral_palsy_unilateral",
+  "assessment_date": "2026-05-16",
+  "conditions_tested": [
+    "barefoot",
+    "with_AFO"
+  ],
+  "selected_condition": "barefoot"
+}
