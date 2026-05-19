@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from src.events import CYCLE_POINTS, extract_cycles_from_trial
+from events import CYCLE_POINTS, extract_cycles_from_trial
 
 
 @dataclass
