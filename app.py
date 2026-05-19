@@ -9,9 +9,14 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.pipeline import run_session
-
-DATA_DIR = ROOT / "data"
+# Streamlit Cloud / GitHub: data files live in repo root
+# Local dev: data lives in data/ and code in src/
+if (ROOT / "session_meta.json").exists():
+    from pipeline import run_session
+    DATA_DIR = ROOT
+else:
+    from src.pipeline import run_session
+    DATA_DIR = ROOT / "data"
 
 
 @st.cache_data
