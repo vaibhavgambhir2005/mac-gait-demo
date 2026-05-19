@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from src.kinematics import KinematicComparison
-from src.qc import QCResult
+from kinematics import KinematicComparison
+from qc import QCResult
 
 
 def plot_knee_flexion(
